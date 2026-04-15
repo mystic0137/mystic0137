@@ -16,7 +16,7 @@ End-to-end booking prediction system. XGBoost + Random Forest → ONNX → FastA
 
 ---
 
-### [LLM Training Techniques](https://github.com/mystic0137/LLMFinetuning) — `in progress`
+### [LLM Training Techniques](https://github.com/mystic0137/LLM-Finetuning) — `in progress`
 
 Implementing core LLM training methods from scratch — LoRA/PEFT for parameter-efficient fine-tuning, and GRPO (Group Relative Policy Optimization) for RL-based reasoning alignment. Inspired by the Nemotron challenge; now a standalone deep-dive.
 
