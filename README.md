@@ -1,7 +1,8 @@
-# 👋 Zakirulla Khan Ghouri
+# Zakirulla Khan Ghouri
+
 **AI Engineer · VIT Chennai · Chennai, India**
 
-I build **production ML systems** — not notebooks. My focus is the gap between a trained model and something that actually runs fast under load: inference optimization, serving architecture, RAG pipelines, and LLM training techniques.
+I build **production ML systems** — not notebooks. My focus is the gap between a trained model and something that actually runs fast under load: inference optimization, serving architecture, RAG pipelines, and LLM fine-tuning.
 
 ---
 
@@ -16,11 +17,15 @@ End-to-end booking prediction system. XGBoost + Random Forest → ONNX → FastA
 
 ---
 
-### [LLM Finetuning Techniques](https://github.com/mystic0137/LLM-Finetuning) — `in progress`
+### [Prompt-to-PEFT](https://github.com/mystic0137/LLM-finetuning) — `in progress`
 
-Implementing core LLM training methods from scratch — LoRA/PEFT for parameter-efficient fine-tuning, and GRPO (Group Relative Policy Optimization) for RL-based reasoning alignment. Inspired by the Nemotron challenge; now a standalone deep-dive.
+Investigating whether systematic prompt engineering can surface the exact failure modes that fine-tuning should target. 5-class medical paper classification (1909 PubMed abstracts) using Llama-3.2-1B-Instruct.
 
-`PyTorch` `LoRA / PEFT` `GRPO` `RL` `HuggingFace`
+Phase 1 complete: zero-shot ablations hit 45.84% accuracy — isolated pretraining prior bias as the root cause of Meta-analysis over-prediction (48% of predictions vs. 19% true prevalence). Confirmed the failure hierarchy is model-prior-driven, not prompt-format-driven.
+
+Phase 2 in progress: LoRA/QLoRA fine-tuning targeting Observational Studies, the hardest class (best recall 0.46 under any prompting strategy).
+
+`PyTorch` `LoRA / QLoRA` `HuggingFace` `Llama-3.2-1B` `PubMed API`
 
 ---
 
@@ -29,7 +34,7 @@ Implementing core LLM training methods from scratch — LoRA/PEFT for parameter-
 | | |
 |---|---|
 | **Languages** | Python, SQL |
-| **ML / AI** | PyTorch, XGBoost, Scikit-learn, PEFT / LoRA |
+| **ML / AI** | PyTorch, XGBoost, Scikit-learn, PEFT / LoRA / QLoRA |
 | **Serving** | ONNX Runtime, FastAPI, Pydantic V2 |
 | **GenAI** | ChromaDB, Sentence-Transformers, Groq API |
 
