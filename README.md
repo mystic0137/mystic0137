@@ -36,7 +36,7 @@ Includes RLHF-ready feedback logging generating SFT/DPO JSONL datasets and fully
 
 ---
 
-### [Prompt-to-PEFT](https://github.com/mystic0137/LLMFinetuning) — `in progress`
+### [Prompt-to-PEFT](https://github.com/mystic0137/LLMFinetuning) — `complete`
 
 > **Hypothesis: prompt failure modes should guide fine-tuning targets, not overall accuracy**
 
