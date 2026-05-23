@@ -49,9 +49,9 @@ Phase 1 findings:
 - Explicit task framing alone produced a **+27 point accuracy gain**
 - Identified persistent Meta-analysis over-prediction (48% predictions vs. 19% true prevalence) and traced the failure mode to pretraining priors rather than prompt structure through controlled zero-shot and few-shot ablations
 
-Phase 2 in progress:
+Phase 2: (future additions)
 - Targeted LoRA/QLoRA fine-tuning for hardest-class recovery
-- GRPO implementation from scratch in PyTorch
+- GRPO implementation using PyTorch
 
 `PyTorch` `LoRA / QLoRA` `PEFT` `Hugging Face Transformers` `Llama-3.2-1B` `PubMed`
 
