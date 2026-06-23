@@ -35,7 +35,7 @@ Production-oriented lead prioritization and GenAI outreach system that scores **
 
 ---
 
-### [Prompt-to-PEFT](https://github.com/mystic0137/LLMFinetuning) — `complete`
+### [Prompt-to-PEFT](https://github.com/mystic0137/LLM-finetuning) — `complete`
 
 > **Hypothesis: prompt failure modes should guide fine-tuning targets — not overall accuracy. Validated.**
 
