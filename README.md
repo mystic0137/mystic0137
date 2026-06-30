@@ -71,7 +71,9 @@ Multi-agent system that constructs Neo4j knowledge graphs from mixed structured 
 
 **ML & Modeling:** `Python` · `PyTorch` `Hugging Face` `Transformers` · `XGBoost` · `scikit-learn` · `NumPy` · `pandas`
 
-**LLM / GenAI:** `LoRA / QLoRA / PEFT` · `RAG Pipelines` · `ChromaDB` · `Sentence-Transformers` · `Groq / Llama`
+**LLM / GenAI:** `LoRA / QLoRA / PEFT` · `RAG Pipelines` · `ChromaDB` · `Sentence-Transformers` · `Groq / Llama`, `Multi-Agent Systems`, `Langchain`, `Langgraph`
+
+**Knowledge Graphs:** `Neo4j`
 
 **Serving & Infra:** `ONNX Runtime` · `FastAPI` · `Docker` · `Pydantic V2` · `Vectorized Inference`
 
