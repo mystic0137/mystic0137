@@ -35,7 +35,7 @@ Production-oriented lead prioritization and GenAI outreach system that scores **
 
 ---
 
-### [Prompt-to-PEFT](https://github.com/mystic0137/LLM-finetuning) — `complete`
+### [Prompt-to-PEFT](https://github.com/mystic0137/prompt_to_peft) — `complete`
 
 > **Hypothesis: prompt failure modes should guide fine-tuning targets — not overall accuracy. Validated.**
 
@@ -52,6 +52,20 @@ Research-oriented LLM evaluation + PEFT project investigating how prompt structu
 `PyTorch` `LoRA / QLoRA` `PEFT` `Hugging Face Transformers` `Llama-3.2-1B` `Qwen` `Gemma` `PubMed`
 
 ---
+
+ ### [Agentic Knowledge Graph Construction](https://github.com/mystic0137/Agentic-knowledge-graph-construction) — `complete`
+
+> **Same 5-agent pipeline, two frameworks · ADK vs. LangGraph benchmarked head-to-head · deterministic offline replay · 23 equivalence-pinned tests**
+
+Multi-agent system that constructs Neo4j knowledge graphs from mixed structured (CSV) and unstructured (Markdown / plain-text) sources, modeling a furniture supply chain — products, assemblies, parts, suppliers, and customer reviews — so failures can be traced from a bad review back to the responsible part and supplier for root-cause analysis.
+
+- Decomposed graph construction into five specialized agents — user-intent, file proposal, NER/schema induction, relevant-fact extraction, and a propose→critique→retry schema-refinement loop — driving a Product→Assembly→Part→Supplier bill-of-materials linked to review sentiment.
+- Reimplemented the identical pipeline in both Google ADK and LangChain/LangGraph (same agents, order, prompts, tools, Neo4j schema), then proved equivalence: both emit byte-for-byte identical work — 19 LLM calls / 15 tool calls / 2,622 tokens (unstructured) and 37 / 27 / 5,106 (full) — pinned by a cross-framework test suite.
+- Architected a framework-agnostic core (kg/core) holding all prompts, tool logic, state schema, and the Neo4j backend, reducing each framework to a thin adapter layer — so business logic is maintained once, not twice, and swapping orchestrators is an adapter problem, not a rewrite.
+- Built a deterministic mock-LLM mode (scripted tool sequences with fixed token accounting) that makes the benchmark fully offline and reproducible, isolating pure framework-orchestration overhead from noisy rate-limited model latency.
+- Benchmarked both frameworks across cold-start, steady-state wall time, CPU utilization, RSS / heap memory, token usage, and throughput with auto-generated Markdown + CSV reports — quantifying ADK's ~3× heavier cold start (larger import tree) against near-parity steady-state to surface real production trade-offs.
+
+`Python` `Neo4j` `Google ADK` `LangChain / LangGraph` `LiteLLM` `Pydantic-Settings` `Multi-Agent Systems`
 
 ## 🛠 Core Stack
 
